@@ -1,7 +1,7 @@
 # TheHandyForUnity_APIv2
 
 It's a SDK to add the ability to control TheHandy by HTTP request in a Unity project
- by using API v2 of Handyfeeling.
+ by using API v2 of Handyfeeling. (2023-01 This API is the current main API. Support will be at least through 2024)
 
 I based my work on https://github.com/defucilis/TheHandyUnity
 
@@ -54,7 +54,23 @@ There is the listing as code in my class HandyHTTPConnection.cs
 
 - Handy Buffered Streaming Protocal (HBSP) (Not yet implemented - 2023-01)
 
-- Handy Simple Timing Protocol (HSTP) : Available in all mode, it's mainly for HSSP. See my description HSSP 
+- Handy Simple Timing Protocol (HSTP) : Available in all mode, it's mainly for HSSP. See my description HSSP
+    -   HSTP_GetDeviceTime
+    -   HSTP_GetOffset
+    -   HSTP_SetOffset
+    -   HSTP_GetRtd
+    -   HSTP_GetSync (Could be just Sync)
+
+- General commands
+    -   GetServerTime
+    -   GetMode
+    -   SetMode
+    -   GetConnected (Check if a specifc device is connected and online)
+    -   GetInfos
+    -   GetSettings (2022-01 :Swagger said include offset and velocity but TheHandy return only slideMin and slideMax)
+    -   GetStatus
+    -   GetSlide (Min/Max stroke)
+    -   SetSlide (Min/Max stroke)
 
 
 ## Upload File To The Server
