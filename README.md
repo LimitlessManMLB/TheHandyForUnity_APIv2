@@ -4,10 +4,10 @@ It's a SDK to add the ability to control TheHandy by HTTP request in a Unity pro
 
 I based my work on https://github.com/defucilis/TheHandyUnity
 
-You will need to install Text Mesh Pro to run the UI Example
+You will need to install Text Mesh Pro to run the UI Example.
 
 ### What is TheHandy
-TheHandy is male masturbator than can be controlled by remote command (HTTP or Bluetooth) : https://www.thehandy.com/
+TheHandy is a male masturbator than can be controlled by remote commands (HTTP or Bluetooth) : https://www.thehandy.com/
 
 For blutooth, see : https://buttplug.io/
 
@@ -21,10 +21,14 @@ See also Handyfeeling Developer Documentation : https://sweettech.notion.site/Ge
 
 All commands are first send to https://www.handyfeeling.com/api/handy/v2/ then send to TheHandy.
 
+If a set of data are send to / receive from TheHandy, I made an enum or a struct for it.
+
 ### Upload file to the server
 That Swagger that show how to upload/download script on handyfeeling server : https://staging.handyfeeling.com/api/handy/v2/docs/#/
 
-I add both command in my SDK
+File are uploaded on a different address : https://scripts01.handyfeeling.com/api/script/hosting/v0/
+
+I add both command in my SDK.
 
 ### Install this SDK on your Unity project
 asdasd
