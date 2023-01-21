@@ -1,18 +1,21 @@
 # TheHandyForUnity_APIv2
 
-It's a package to add on a Unity Project to control TheHandy by HTTP request.
+It's a SDK to add the ability to control TheHandy by HTTP request in a Unity project.
 
-I base my work on https://github.com/defucilis/TheHandyUnity
+I based my work on https://github.com/defucilis/TheHandyUnity
 
 You will need to install Text Mesh Pro to run UI Example
 
 ### What is TheHandy
 TheHandy is male masturbator than can be controlled by remote command (HTTP or Bluetooth) : https://www.thehandy.com/
 
-For blutooth, see : 
+For blutooth, see : https://buttplug.io/
 
-### TheHandy HTTP requests
-That Swagger that show all HTTP request that can be send to TheHandy (API v2) : https://staging.handyfeeling.com/api/handy/v2/docs/#/
+### HTTP requests
+That Swagger show all HTTP request that can be send to TheHandy (API v2) : https://staging.handyfeeling.com/api/handy/v2/docs/#/
+
+All request are in my SDK but maintenance. I think it's really a better idea to make firmware update update directly on TheHandy site :
+https://www.handyfeeling.com/local-video
 
 See also Handyfeeling Developer Documentation : https://sweettech.notion.site/Get-started-1704d1c1d205408999a3c005e0c06d8f
 
