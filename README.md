@@ -1,17 +1,18 @@
 # TheHandyForUnity_APIv2
 
-It's a SDK to add the ability to control TheHandy by HTTP request in a Unity project.
+It's a SDK to add the ability to control TheHandy by HTTP request in a Unity project
+ by using API v2 of Handyfeeling.
 
 I based my work on https://github.com/defucilis/TheHandyUnity
 
 You will need to install Text Mesh Pro to run the UI Example.
 
-## What is TheHandy
+## What Is TheHandy
 TheHandy is a male masturbator than can be controlled by remote commands (HTTP or Bluetooth) : https://www.thehandy.com/
 
 For blutooth, see : https://buttplug.io/
 
-## HTTP requests
+## HTTP Requests
 That Swagger show all HTTP request that can be send to TheHandy (API v2) : https://staging.handyfeeling.com/api/handy/v2/docs/#/
 
 All request are in my SDK but maintenance. I think it's really a better idea to make firmware update update directly on TheHandy site :
@@ -23,14 +24,45 @@ All commands are first send to https://www.handyfeeling.com/api/handy/v2/ then s
 
 If a set of data are send to / receive from TheHandy, I made an enum or a struct for it.
 
+### Modes And Commands
+
+API v2 give 5 modes with there specific command and some general command.
+
+There is the listing as code in my class HandyHTTPConnection.cs
+
+- Handy Alternate Motion Protocol (HAMP) operations :
+    -   HAMP_Start
+    -   HAMP_Stop
+    -   HAMP_GetVelocity
+    -   HAMP_SetVelocity
+    -   HAMP_GetState
+
+- Handy Direct Streaming Protocol (HDSP) operations :
+    -   HDSP_Set_xava (absolute position (xa), and the absolute velocity (va))
+    -   HDSP_Set_xpva (percent position (xp), and the absolute velocity (va))
+    -   HDSP_Set_xpvp (percent position (xp), and the percent velocity (vp))
+    -   HDSP_Set_xat  (absolute position (xa), and duration (t))
+    -   HDSP_Set_xpt  (percent position (xp), and duration (t))
+
+- Handy Synced Stream Protocol (HSSP) operations : It's with that mode that you can play funscript
+    -   HSSP_Play
+    -   HSSP_Stop
+    -   HSSP_Setup
+    -   HSSP_GetLoop
+    -   HSSP_SetLoop
+    -   HSSP_GetState
+
+- Handy Buffered Streaming Protocal (HBSP) (Not yet implemented - 2023-01)
+
+- Handy Simple Timing Protocol (HSTP) : Available in all mode, it's mainly for HSSP. See my description HSSP 
 
 
-## Upload file to the server
+## Upload File To The Server
 That Swagger that show how to upload/download script on handyfeeling server : https://staging.handyfeeling.com/api/handy/v2/docs/#/
 
 File are uploaded on a different address : https://scripts01.handyfeeling.com/api/script/hosting/v0/
 
 I add both command in my SDK.
 
-## Install this SDK on your Unity project
+## Install This SDK zon Your Unity Project
 asdasd
