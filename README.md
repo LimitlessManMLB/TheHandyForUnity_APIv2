@@ -67,7 +67,7 @@ There is the listing as given in my class HandyHTTPConnection.cs :
     -   SetMode
     -   GetConnected (This is the fastest way to check device connectivity)
     -   GetInfos
-    -   GetSettings (2022-01 :Swagger said include offset and velocity but TheHandy return only slideMin and slideMax)
+    -   GetSettings (2022-01 : Swagger said that include offset and velocity but TheHandy return only slideMin and slideMax)
     -   GetStatus
     -   GetSlide (Min/Max stroke)
     -   SetSlide (Min/Max stroke)
@@ -77,7 +77,7 @@ There is the listing as given in my class HandyHTTPConnection.cs :
 To use the handy on HSSP mode, some command must be send to work properly:
 1.   Send HSTP_GetSync to made TheDandy synchronize his clock with the server. (Optional)
 2.   Upload a File to the server and get the returned url.
-3.   Send HSSP_Setup with this url to make TheHandy download the script.
+3.   Send HSSP_Setup with url to make TheHandy download the script.
 4.   Send HSTP_GetDeviceTime to get the deviceTime.
 5.   Send HSSP_Play with the deviceTime to make TheHandy play downloaded script.
 
@@ -87,7 +87,7 @@ That Swagger that show how to upload/download script on handyfeeling server : ht
 File are uploaded on a different address : https://scripts01.handyfeeling.com/api/script/hosting/v0/
 
 - Commands
-    -   UploadScript
+    -   UploadScript (Can upload .csv, .Funscript and .Json)
     -   DownloadScript
 
 ## Install This SDK in Your Unity Project
