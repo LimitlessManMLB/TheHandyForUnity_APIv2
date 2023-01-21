@@ -4,7 +4,7 @@ It's a SDK to add the ability to control TheHandy by HTTP request in a Unity pro
 
 I based my work on https://github.com/defucilis/TheHandyUnity
 
-You will need to install Text Mesh Pro to run the UI Example.
+You will need to install Text Mesh Pro to run the UI Example. (Sory, I realise that to late. Now it's a mess to change to generic UI)
 
 ### What is TheHandy
 TheHandy is a male masturbator than can be controlled by remote commands (HTTP or Bluetooth) : https://www.thehandy.com/
