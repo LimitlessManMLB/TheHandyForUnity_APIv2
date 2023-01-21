@@ -7,10 +7,10 @@ It's a package to add on a Unity Project to control TheHandy by HTTP request.
 TheHandy is male masturbator than can be controlled by remote command (HTTP or Bluetooth) : https://www.thehandy.com/
 
 ### TheHandy HTTP requests
-Swagger that show all HTTP request that can be send to TheHandy (API v2) :
-https://staging.handyfeeling.com/api/handy/v2/docs/#/
+That Swagger that show all HTTP request that can be send to TheHandy (API v2) : https://staging.handyfeeling.com/api/handy/v2/docs/#/
+I XXX
 
 All commands are first send to https://www.handyfeeling.com/api/handy/v2/ then send to TheHandy.
 
-Swagger that show how to upload/download script on handyfeeling server :
-https://staging.handyfeeling.com/api/handy/v2/docs/#/
+### Upload file to the server
+That Swagger that show how to upload/download script on handyfeeling server : https://staging.handyfeeling.com/api/handy/v2/docs/#/
