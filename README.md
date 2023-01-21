@@ -5,8 +5,6 @@ It's a SDK to add the ability to control TheHandy by HTTP request in a Unity pro
 
 I based my work on https://github.com/defucilis/TheHandyUnity
 
-You will need to install Text Mesh Pro to run the UI Example.
-
 ## What Is TheHandy
 TheHandy is a male masturbator than can be controlled by remote commands (HTTP or Bluetooth) : https://www.thehandy.com/
 
@@ -28,7 +26,9 @@ If a set of data are send to / receive from TheHandy, I made an enum or a struct
 
 API v2 give 5 modes with there specific command and some general command.
 
-There is the listing as code in my class HandyHTTPConnection.cs
+HAMP, HDSP and HSSP mode must be set prior to send their commands. Otherwise, an error will by throw by the server.
+
+There is the listing as code in my class HandyHTTPConnection.cs :
 
 - Handy Alternate Motion Protocol (HAMP) operations :
     -   HAMP_Start
@@ -44,7 +44,7 @@ There is the listing as code in my class HandyHTTPConnection.cs
     -   HDSP_Set_xat  (absolute position (xa), and duration (t))
     -   HDSP_Set_xpt  (percent position (xp), and duration (t))
 
-- Handy Synced Stream Protocol (HSSP) operations : It's with that mode that you can play funscript
+- Handy Synced Stream Protocol (HSSP) operations : It's with that mode that you can play cript
     -   HSSP_Play
     -   HSSP_Stop
     -   HSSP_Setup
@@ -72,13 +72,30 @@ There is the listing as code in my class HandyHTTPConnection.cs
     -   GetSlide (Min/Max stroke)
     -   SetSlide (Min/Max stroke)
 
+### HSSP mode, a litle more complicated
+
+To use the handy on HSSP mode, some command must be send to work properly:
+    1.  Send HSTP_GetSync to made TheDandy syncronize his clock with the server. (Optional)
+    2.  Upload a File to the server and get the returned url.
+    3.  Send HSSP_Setup with this url to make TheHandy download the script.
+    4.  Send HSTP_GetDeviceTime to get the deviceTime.
+    5.  Send HSSP_Play with the deviceTime to make TheHandy play downloaded script.
 
 ## Upload File To The Server
-That Swagger that show how to upload/download script on handyfeeling server : https://staging.handyfeeling.com/api/handy/v2/docs/#/
+That Swagger that show how to upload/download script on handyfeeling server : https://scripts01.handyfeeling.com/api/script/hosting/v0/docs/#/
 
 File are uploaded on a different address : https://scripts01.handyfeeling.com/api/script/hosting/v0/
 
-I add both command in my SDK.
+- Commands
+    -   UploadScript
+    -   DownloadScript
 
 ## Install This SDK zon Your Unity Project
-asdasd
+That realy simple, install the TheHandyForUnity_APIv2.unitypackage on your project.
+
+Then all you realy need is :
+- SimpleJSON (Exept AsLong, it's a copy from https://github.com/defucilis/TheHandyUnity)
+- HandyConnectionAPIv2 : (I keeped some basic function but almost all are new)
+- StructsAndEnums (Exept LogMode, all is new)
+
+To run the UI Example You will need to install Text Mesh Pro.
