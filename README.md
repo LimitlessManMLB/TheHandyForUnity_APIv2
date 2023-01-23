@@ -72,14 +72,17 @@ There is the listing as given in my class HandyHTTPConnection.cs :
     -   GetSlide (Min/Max stroke)
     -   SetSlide (Min/Max stroke)
 
+- Special commands
+    -   PowerDown (Send Stop if HSSP/HAMP playing)
+
 ### HSSP, All the details
 
 To use the handy on HSSP mode, some command must be send to work properly:
-1.   Send HSTP_GetSync to made TheDandy synchronize his clock with the server. (Optional)
+1.   Send HSTP_GetSync to made TheDandy synchronize his clock with the server.
 2.   Upload a File to the server and get the returned url.
 3.   Send HSSP_Setup with url to make TheHandy download the script.
-4.   Send HSTP_GetDeviceTime to get the deviceTime.
-5.   Send HSSP_Play with the deviceTime to make TheHandy play downloaded script.
+4.   calcul the EstimatedLatency like explained in the swagger : https://staging.handyfeeling.com/api/handy/v2/docs/#/
+5.   Send HSSP_Play with the EstimatedLatency to make TheHandy play the downloaded script.
 
 ## Upload File To The Server
 That Swagger that show how to upload/download script on handyfeeling server : https://scripts01.handyfeeling.com/api/script/hosting/v0/docs/#/
